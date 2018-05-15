@@ -1,0 +1,20 @@
+language: php
+
+php:
+  - '7.1'
+
+branches:
+  only: master
+
+cache:
+  directories:
+  - vendor
+  - $HOME/.cache/composer
+
+before_script:
+  - composer self-update
+  - composer install --no-interaction --no-suggest
+  - composer sniff
+
+script:
+  - vendor/bin/phpunit --junit-xml junit.xml > /dev/null
