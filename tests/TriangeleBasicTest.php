@@ -39,7 +39,7 @@ class TriangleBasicTest extends TestCase
      */
     public function setUp(): void
     {
-        $this->harness = new Triangle(1, 1, 1);
+        $this->harness = new Triangle(3, 4, 5);
     }
 
     /**
@@ -90,7 +90,7 @@ class TriangleBasicTest extends TestCase
     public function testIsValidTrue(): void
     {
         // arrange & act
-        $actual = $this->harness->isValid(1, 1, 1);
+        $actual = $this->harness->isValid(3, 4, 5);
         // assert
         $this->assertTrue($actual);
     }
@@ -105,14 +105,14 @@ class TriangleBasicTest extends TestCase
      * @link     https://weber.edu
      * @return   null
      */
-    public function testGetSides1(): void
+    public function testGetSides(): void
     {
         // act
         $actual = $this->harness->getSides();
         // assert
-        $this->assertTrue($actual[0] === 1);
-        $this->assertTrue($actual[1] === 1);
-        $this->assertTrue($actual[2] === 1);
+        $this->assertTrue($actual[0] === 3);
+        $this->assertTrue($actual[1] === 4);
+        $this->assertTrue($actual[2] === 5);
     }
 
     /**
@@ -125,16 +125,34 @@ class TriangleBasicTest extends TestCase
      * @link     https://weber.edu
      * @return   null
      */
-    public function testGetSides2(): void
+    public function testSetSidesSuccess(): void
     {
         // arrange
-        $this->harness->setSides(1, 2, 3);
+        $this->harness->setSides(3, 4, 5);
         // act
         $actual = $this->harness->getSides();
         // assert
-        $this->assertTrue($actual[0] === 1);
-        $this->assertTrue($actual[1] === 2);
-        $this->assertTrue($actual[2] === 3);
+        $this->assertTrue($actual[0] === 3);
+        $this->assertTrue($actual[1] === 4);
+        $this->assertTrue($actual[2] === 5);
+    }
+
+    /**
+     * Tests
+     *
+     * @category UnitTests
+     * @package  App\Tests
+     * @author   Don Stringham <donstringham@weber.edu>
+     * @license  MIT https://opensource.org/licenses/MIT
+     * @link     https://weber.edu
+     * @return   null
+     *
+     * @expectedException InvalidArgumentException
+     */
+    public function testSetSidesException(): void
+    {
+        // arrange & act & assert
+        $this->harness->setSides(0, -1, -3);
     }
 
     /**

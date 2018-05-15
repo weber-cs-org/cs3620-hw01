@@ -59,7 +59,7 @@ class Triangle
      * @license  MIT https://opensource.org/licenses/MIT
      * @link     https://weber.edu
      */
-    public function __construct($newSide1 = 1, $newSide2 = 1, $newSide3 = 1)
+    public function __construct($newSide1 = 3, $newSide2 = 4, $newSide3 = 5)
     {
         $this->setSides($newSide1, $newSide2, $newSide3);
     }
@@ -93,7 +93,7 @@ class Triangle
      */
     public function getArea(): number
     {
-        // TODO Implement this method
+        // TODO Implement method
     }
 
     /**
@@ -109,7 +109,7 @@ class Triangle
      */
     public function getPerimeter(): number
     {
-        // TODO Implement this method
+        // TODO Implement method
     }
 
     /**
@@ -125,7 +125,7 @@ class Triangle
      */
     public function getSides()
     {
-        // TODO Implement this method
+        // TODO Implement method
     }
 
     /**
@@ -143,9 +143,9 @@ class Triangle
      *
      * @return void
      */
-    public function setSides($newSide1 = 1, $newSide2 = 1, $newSide3 = 1)
+    public function setSides($newSide1 = 3, $newSide2 = 4, $newSide3 = 5)
     {
-        // TODO Implement this method
+        // TODO Implement method
     }
 
     /**
@@ -165,7 +165,7 @@ class Triangle
      */
     public function isValid($a, $b, $c): bool
     {
-        // TODO Implement this method
+        // TODO Implement method
     }
 
     /**
@@ -181,7 +181,7 @@ class Triangle
      */
     public function isEqualateral(): bool
     {
-        // TODO Implement this method
+        // TODO Implement method
     }
 
     /**
@@ -197,7 +197,7 @@ class Triangle
      */
     public function isIsosceles(): bool
     {
-        // TODO Implement this method
+        // TODO Implement method
     }
 
     /**
@@ -214,6 +214,6 @@ class Triangle
      */
     public function isRightTriangle(): bool
     {
-        // TODO Implement this method
+        // TODO Implement method
     }
 }

@@ -8,7 +8,7 @@ Design and implement an abstract data type (ADT) that represents a triangle.  Th
 
 You must write code in the class **Triangle**.  The class **Triangle** implements from the interface **TriangleInterface**.  The constructor must be able to:
 
-* Provide default values for the ADT.  Default values are to be (1, 1, 1).
+* Provide default values for the ADT.  Default values are to be (3, 4, 5).
 * Sets the data to supplied values.
     * When inputs don't form a triangle throw the correct exception.
     * Reference: [https://www.wikihow.com/Determine-if-Three-Side-Lengths-Are-a-Triangle](https://www.wikihow.com/Determine-if-Three-Side-Lengths-Are-a-Triangle)
