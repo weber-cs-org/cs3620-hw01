@@ -8,9 +8,9 @@ Design and implement an abstract data type (ADT) that represents a triangle.  Th
 
 You must write code in the class **Triangle**.  The class **Triangle** implements from the interface **TriangleInterface**.  The constructor must be able to:
 
-* Provide default values for the ADT.  Default values are to be (3, 4, 5).
+* Provide default values for the ADT.  Default values are to be (1, 1, 1).
 * Sets the data to supplied values.
-    * When inputs don't form a triangle set all sides to 0.
+    * When inputs don't form a triangle throw the correct exception.
     * Reference: [https://www.wikihow.com/Determine-if-Three-Side-Lengths-Are-a-Triangle](https://www.wikihow.com/Determine-if-Three-Side-Lengths-Are-a-Triangle)
 
 The ADT also must include operations that:
@@ -30,7 +30,7 @@ The ADT also must include operations that:
     * Double
 
 ## Files to work on
-* You are required to work on the `README.md` and `/src/triangle.php` files.  Please **DO NOT MODIFY** any other files.  Doing so will result in penalty to your grade.
+* You are required to work on the `README.md` and `/src/Triangle.php` files.  Please **DO NOT MODIFY** any other files.  Doing so will result in penalty to your grade.
 
 ##Notes
 * It is required that you add your *name* and *travis ci badge* to the `README.md` file.
