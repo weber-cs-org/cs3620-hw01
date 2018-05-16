@@ -208,7 +208,7 @@ class TriangleBasicTest extends TestCase
     public function testIsIsoscelesTrue(): void
     {
         // arrange
-        $this->harness->setSides(2, 2, 4);
+        $this->harness->setSides(2, 2, 3);
         // act
         $actual = $this->harness->isIsosceles();
         // assert
@@ -273,5 +273,26 @@ class TriangleBasicTest extends TestCase
         $actual = $this->harness->isRightTriangle();
         // assert
         $this->assertFalse($actual);
+    }
+
+    /**
+     * Test
+     *
+     * @category UnitTests
+     * @package  App\Tests
+     * @author   Don Stringham <donstringham@weber.edu>
+     * @license  MIT https://opensource.org/licenses/MIT
+     * @link     https://weber.edu
+     * @return   null
+     */
+    public function testPerimeterSuccess(): void
+    {
+        // arrange
+        $expected = 30;
+        $this->harness->setSides(5, 12, 13);
+        // act
+        $actual = $this->harness->getPerimeter();
+        // assert
+        $this->assertEquals($expected, $actual);
     }
 }

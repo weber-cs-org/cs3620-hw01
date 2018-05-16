@@ -93,7 +93,12 @@ class Triangle
      */
     public function getArea(): number
     {
-        // TODO Implement method
+        $p = $this->getPerimeter / 2;
+        $a = $p - $this->side1;
+        $b = $p - $this->side2;
+        $c = $p - $this->side3;
+
+        return sqrt($p * $a * $b * $c);
     }
 
     /**
@@ -105,11 +110,11 @@ class Triangle
      * @license  MIT https://opensource.org/licenses/MIT
      * @link     https://weber.edu
      *
-     * @return number
+     * @return int
      */
-    public function getPerimeter(): number
+    public function getPerimeter(): int
     {
-        // TODO Implement method
+        return $this->side1 + $this->side2 + $this->side3;
     }
 
     /**
@@ -125,7 +130,7 @@ class Triangle
      */
     public function getSides()
     {
-        // TODO Implement method
+        return [$this->side1, $this->side2, $this->side3];
     }
 
     /**
@@ -145,7 +150,17 @@ class Triangle
      */
     public function setSides($newSide1 = 3, $newSide2 = 4, $newSide3 = 5)
     {
-        // TODO Implement method
+        if (!$this->isValid($newSide1, $newSide2, $newSide3)) {
+            throw new \InvalidArgumentException(
+                $newSide1.', '.
+                $newSide2.', '.
+                $newSide3.' do not make a valid triangle'
+            );
+        }
+
+        $this->side1 = $newSide1;
+        $this->side2 = $newSide2;
+        $this->side3 = $newSide3;
     }
 
     /**
@@ -165,7 +180,11 @@ class Triangle
      */
     public function isValid($a, $b, $c): bool
     {
-        // TODO Implement method
+        if ($a + $b <= $c || $a + $c <= $b || $b + $c <= $a) {
+            return false;
+        }
+
+        return true;
     }
 
     /**
@@ -181,7 +200,11 @@ class Triangle
      */
     public function isEqualateral(): bool
     {
-        // TODO Implement method
+        if ($this->side1 !== $this->side2 || $this->side2 !== $this->side3) {
+            return false;
+        }
+
+        return true;
     }
 
     /**
@@ -197,7 +220,14 @@ class Triangle
      */
     public function isIsosceles(): bool
     {
-        // TODO Implement method
+        if ($this->side1 === $this->side2
+            || $this->side1 === $this->side2
+            || $this->side2 === $this->side3
+        ) {
+            return true;
+        }
+
+        return false;
     }
 
     /**
@@ -214,6 +244,14 @@ class Triangle
      */
     public function isRightTriangle(): bool
     {
-        // TODO Implement method
+        $a2 = $this->side1 * $this->side1;
+        $b2 = $this->side2 * $this->side2;
+        $c2 = $this->side3 * $this->side3;
+
+        if ($a2 + $b2 !== $c2) {
+            return false;
+        }
+
+        return true;
     }
 }
