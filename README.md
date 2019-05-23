@@ -33,7 +33,7 @@ The ADT also must include operations that:
 * You are required to work on the `README.md` and `/src/Triangle.php` files.  Please **DO NOT MODIFY** any other files.  Doing so will result in penalty to your grade.
 
 ##Notes
-* It is required that you add your *name* and *travis ci badge* to the `README.md` file.
+* It is required that you add your *name* to the `README.md` file.
 * No partial credit.
 * Make sure your last push is before the deadline.  The last push is considered your final submission.
 * Post questions on Canvas.
